@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #a2ad91;
+}
+.txt {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff1d0;
+}
+.txt h3 {
+    font-weight: 600;
+}
+.txt h1 {
+    margin-top: 0;
+    font-weight: 400;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.slider-principal {
+    margin-bottom: 50px;
+}
+.slider-principal .slick-slide,
+.slider-principal .slick-slide img {
+    transition: all linear .4s;
+}
+.slider-principal .slick-active img {
+    transform: scale(0.86) rotateY(0);
+}
+.slider-principal .slick-slide:has(+ .slick-active) {
+    perspective: 90px;
+    transform: translateX(120px);
+}
+.slider-principal .slick-slide:has(+ .slick-active) img {
+    transform: scale(1) rotateY(1.5deg) !important;
+}
+.slider-principal .slick-active + .slick-slide {
+    perspective: 90px;
+    transform: translateX(-120px);
+}
+.slider-principal .slick-active + .slick-slide img{
+    transform: scale(1) rotateY(-1.5deg);
+}
+.slider-secundario {
+    margin: auto;
+}
+.slick-slide img {
+    margin: auto;
+}
